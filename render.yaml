@@ -1,0 +1,6 @@
+description: Deploy to Render
+steps:
+  - name: Build Web
+    command: npm run build
+  - name: Deploy
+    command: serve -s dist
