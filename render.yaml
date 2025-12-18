@@ -1,6 +1,10 @@
-description: Deploy to Render
-steps:
-  - name: Build Web
-    command: npm run build
-  - name: Deploy
-    command: serve -s dist
+services:
+  - type: web
+    name: voiceflow
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
