@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Courier New', Courier, monospace;
+  /* Monospace for comic feel */
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Comic Book Utilities */
+@layer utilities {
+  .comic-shadow {
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  .dark .comic-shadow {
+    box-shadow: 4px 4px 0px 0px rgba(156, 163, 175, 1);
+    /* gray-400 */
+  }
+
+  .comic-border {
+    border: 3px solid black;
+  }
+
+  .dark .comic-border {
+    border: 3px solid #9ca3af;
+    /* gray-400 */
+  }
+}
